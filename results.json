@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2025-04-07T14:26:08.065Z",
+    "player": "Vasia",
+    "attempts": 4,
+    "success": true
+  },
+  {
+    "date": "2025-04-07T14:26:27.378Z",
+    "player": "Vasia",
+    "attempts": 1,
+    "success": true
+  },
+  {
+    "date": "2025-04-07T14:33:09.904Z",
+    "player": "Vasia23",
+    "attempts": 5,
+    "success": false
+  },
+  {
+    "date": "2025-04-07T14:40:09.234Z",
+    "player": "1",
+    "attempts": 2,
+    "success": true
+  }
+]

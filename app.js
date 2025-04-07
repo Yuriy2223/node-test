@@ -3,7 +3,6 @@ const fs = require("fs").promises;
 const { program } = require("commander");
 require("colors");
 
-// Команда для вказання файлу (не обов’язково)
 program.option(
   "-f, --file [type]",
   "file for saving game results",
@@ -33,7 +32,6 @@ const isValid = (value) => {
   return true;
 };
 
-// Функція для запису результату в JSON
 const log = async (data) => {
   try {
     let results = [];
@@ -41,7 +39,7 @@ const log = async (data) => {
       const fileData = await fs.readFile(logFile, "utf-8");
       results = JSON.parse(fileData);
     } catch (err) {
-      // Якщо файл не існує — не проблема, створимо
+      console.log(err);
     }
 
     results.push(data);
@@ -52,11 +50,10 @@ const log = async (data) => {
   }
 };
 
-// Функція запиту імені
 const askName = () => {
   rl.question("Введіть ваше ім'я: ".cyan, (name) => {
     playerName = name || "Гість";
-    game(); // стартуємо гру після введення імені
+    game();
   });
 };
 
@@ -80,8 +77,7 @@ const game = () => {
         }).finally(() => rl.close());
         return;
       }
-      if (count >= 5) {
-        // Ліміт на кількість спроб
+      if (count >= 10) {
         console.log(
           `Ви не вгадали за 5 спроб. Загадане число було ${mind}.`.red
         );
@@ -99,5 +95,7 @@ const game = () => {
   );
 };
 
-// Запитуємо ім'я перед початком гри
 askName();
+
+// npm i commander
+// npm i colors

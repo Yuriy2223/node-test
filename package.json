@@ -1,8 +1,12 @@
 {
   "dependencies": {
+    "chalk-animation": "^2.0.3",
+    "colors": "^1.4.0",
+    "commander": "^13.1.0",
     "cookie-parser": "^1.4.7",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
+    "figlet": "^1.8.0",
     "mongoose": "^8.13.2"
   },
   "devDependencies": {
@@ -13,7 +17,6 @@
   "name": "test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "nodemon app.js",
     "start": "node app.js",
